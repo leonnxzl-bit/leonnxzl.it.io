@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open contact.html",
+            "file": "c:\\Users\\hp\\Downloads\\DIANA RAFAELA DE LEON CV-20250610T154652Z-1-001\\contact.html"
+        }
+    ]
+}

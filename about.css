@@ -1,0 +1,264 @@
+
+* {
+  margin: 0;
+  margin-bottom: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 40px;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .3rem 1cap;
+  background: transparent;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 8rem;
+}
+
+.logo img {
+  margin-top: -30px; /* or -20px, adjust as you like */
+  height: 100px; /* control size too */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 1000;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #f7c843;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 1000;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom effect on hover */
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #f7c843;
+  transform: scale(1.08);
+}
+
+/* Underline animation using a pseudo-element */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #f7c843;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+  width: 100%;
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  background-color: #f7c843;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* ABOUT SECTION */
+
+.container {
+  overflow-y: auto;
+  display: flex;
+  min-height: 100vh;
+
+  background-position: center;
+  background-repeat: repeat;
+
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  gap: 40px; /* optional spacing between left and right */
+}
+
+.left {
+  flex: 1;
+  text-align: center;
+}
+
+.left img {
+  margin-top: 7%;
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.left h1 {
+  margin: 20px 0 5px;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.left p {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.left .title {
+  margin-top: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.right {
+  flex: 1.5;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.section h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.section p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.resume-button {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.resume-button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+};
+
+
+.bold {
+  font-weight: bold;
+}
+
+@keyframes slideFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Base animation style */
+.section h2,
+.section h3,
+.section p,
+.section.education,
+.section.experience {
+  opacity: 0;
+  animation: slideFadeInRight 0.8s ease forwards;
+}
+
+/* Optional: add delays for a staggered look */
+.section h2 {
+  animation-delay: 0.2s;
+}
+
+.section h3 {
+  animation-delay: 0.4s;
+}
+
+.section p:nth-of-type(1) {
+  animation-delay: 0.6s;
+}
+
+.section p:nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+
+.section p:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+.section.education {
+  animation-delay: 1.2s;
+}
+
+.section.experience {
+  animation-delay: 1.4s;
+}
+
+@keyframes slideLetterIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popLoop {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.pop-title {
+  display: inline-block;
+  animation: popLoop 2s ease-in-out infinite;
+}
